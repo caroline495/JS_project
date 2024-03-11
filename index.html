@@ -11,13 +11,28 @@
 <body>
     <h1>The Met Highlights</h1>
     
+    <div class="search">
+        <form class="search-bar">
+            <label for="search-category">Search by:</label>
+            <select name="search-category" id="search-category">
+                <option value="select" selected="true" disabled="disabled">Select</option>
+                <option value="title">Title</option>
+                <option value="artist">Artist</option>
+                <option value="medium">Medium</option>
+                <option value="year">Year</option>
+                <option value="tag">Tag</option>
+            </select>
+            <input name="search" value="Search...">
+        </form>
+    </div>
+    
     <nav>
         <ul class="time-periods"> 
             <li>8000 B.C. - 1000 A.D.</li>
             <li>1000-1400 A.D.</li>
-            <li>1400-1600</li>
-            <li>1600-1800</li>
-            <li>1800-1900</li>
+            <li>1400-1600 A.D.</li>
+            <li>1600-1800 A.D.</li>
+            <li>1800-1900 A.D.</li>
             <li>1900-present</li>
         </ul>
     </nav>
@@ -30,7 +45,6 @@
 
     <label>Selected Works:</label>
     <ul class="works">
-        <li>Water Lilies, Claude Monet</li>
         <li>Self-Portrait with a Straw Hat, Vincent Van Gogh</li>
         <li>The Dance Class, Edgar Degas</li>
     </ul>
@@ -40,6 +54,6 @@
 
 
     <p>Note: Data is based on publicly available information from The Metropolitan Museum of Art API on over 480,000 works
-        of art in its Collection. Some objects have missing information such as when it was made, or who the artist was.</p>
+        of art in its collection. Some objects have missing information such as its title, when it was made, or who the artist was.</p>
 </body>
 </html>

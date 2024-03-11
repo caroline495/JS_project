@@ -40,12 +40,46 @@ function collectData(data) {
     return data
 }
 
-// Fetch for time period and isHighlight
-const dateBegin= "-240000";
-const dateEnd = "0";
-let dataset;
+// dataset = fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&dateBegin=${dateBegin}&dateEnd=${dateEnd}&q=*`)
+//   .then(response => {
+//     if (response.ok) {
+//       return response.json();
+//     } else {
+//       throw new Error(response);
+//     }
+//   })
+//   .then(
+//     data => {
+//       console.log("Success!");
+//       console.log(data);
+//     //   console.log(data["objectIDs"]);
+//       set = [...data["objectIDs"]];
+//       console.log("this is dataset");
+//       console.log(set, "hello");
+//       return collectData(set);
+//     },
+//     errorResponse => {
+//       console.log("Failure!");
+//       console.log(errorResponse);
+//     }
+//   );
 
-  fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&dateBegin=${dateBegin}&dateEnd=${dateEnd}&q=*`)
+// Fetch for time period and isHighlight
+const dateBegin= "1800";
+const dateEnd = "1899";
+let dataset;
+let artists = {};
+function addToArtists(object, artist) {
+    if (!object[artist]) {
+        object[artist] = 1;
+    } else {
+        object[artist] += 1;
+    }
+    return object
+}
+
+let sum = 0;
+dataset = fetch(`https://collectionapi.metmuseum.org/public/collection/v1/search?isHighlight=true&dateBegin=${dateBegin}&dateEnd=${dateEnd}&q=*`)
   .then(response => {
     if (response.ok) {
       return response.json();
@@ -58,17 +92,49 @@ let dataset;
       console.log("Success!");
       console.log(data);
     //   console.log(data["objectIDs"]);
-      dataset = [...data["objectIDs"]];
-      console.log(dataset, "hi");
+      set = [...data["objectIDs"]];
+      console.log("this is dataset");
+      return collectData(set);
     },
     errorResponse => {
       console.log("Failure!");
       console.log(errorResponse);
-    }
-  );
-
-  console.log("this is dataset");
-  console.log(dataset, "hello");
+    })
+    .then(data => {
+        data.forEach((element, idx) => {
+            //if (idx < 10) {
+            fetch(`https://collectionapi.metmuseum.org/public/collection/v1/objects/${element}`)
+            .then(response => {
+                console.log("here");
+                return response.json()
+            })
+            .then(response => {
+                // console.log("here2");
+                // console.log(response, idx);
+                // console.log(response.artistDisplayName);
+                addToArtists(artists, response.artistDisplayName);
+                 
+                if (idx === data.length - 1) {
+                    console.log(artists, "artists");
+                    Object.values(artists).forEach(ele => {
+                        sum += ele;
+                    })
+                    console.log(sum, "sum");
+                    let arr = Object.entries(artists).slice();
+                    arr.sort((a, b) => b[1] - a[1]);
+                    console.log(arr.slice(0,14));
+                }
+            });
+            //}
+        })
+        return artists;
+    })
+    .then(response => {
+        // Object.values(artists).forEach(ele => {
+        //     sum += ele;
+        // })
+        // console.log(sum, "sum");
+    });
 
   // Search option, search by category
   // search by (title, artist, year, material, tag)

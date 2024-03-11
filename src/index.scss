@@ -1,5 +1,19 @@
+
+
 body {
     font-family: "Helvetica Neue";
+}
+
+nav {
+    background-color: black;
+    color: white;
+    height: 50px;
+}
+
+.time-periods {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
 }
 
 h1 {
@@ -8,6 +22,24 @@ h1 {
 .works {
     font-style: italic;
 }
+
+.outer {
+    display: flex;
+}
+
+.inner {
+    height: 400px;
+    width: 600px;
+}
+
+#artist {
+    background-color: aqua;
+}
+
+#years {
+    background-color: yellow;
+}
+
 
 p {
     font-size: 12px;

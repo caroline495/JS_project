@@ -7,6 +7,7 @@
     <title>The Met Highlights</title>
     <link rel="stylesheet" href="./dist/main.css"/>
     <script src="./dist/main.js" defer></script>
+    <script src="https://d3js.org/d3.v6.js"></script>
 </head>
 <body>
     <h1>The Met Highlights</h1>
@@ -28,18 +29,20 @@
     
     <nav>
         <ul class="time-periods"> 
-            <li>8000 B.C. - 1000 A.D.</li>
-            <li>1000-1400 A.D.</li>
-            <li>1400-1600 A.D.</li>
-            <li>1600-1800 A.D.</li>
-            <li>1800-1900 A.D.</li>
-            <li>1900-present</li>
+            <li data-time-start="-8000" data-time-end="1000">8000 B.C. - 1000 A.D.</li>
+            <li data-time-start="1000" data-time-end="1400">1000-1400 A.D.</li>
+            <li data-time-start="1400" data-time-end="1600">1400-1600 A.D.</li>
+            <li data-time-start="1600" data-time-end="1800">1600-1800 A.D.</li>
+            <li data-time-start="1800" data-time-end="1900">1800-1900 A.D.</li>
+            <li data-time-start="1900" data-time-end="2024">1900-present</li>
         </ul>
     </nav>
 
     <div class="outer">
-        <div class="inner" id="artist">Container 1</div>
-        
+        <div class="inner" id="artist">Container 1 
+            <div id="my_dataviz"></div>
+        </div>
+
         <div class="inner" id="years">Container 2</div>
     </div>
 

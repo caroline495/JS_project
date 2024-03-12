@@ -8,10 +8,32 @@ class View {
     // Show % of regions represented 
     // Show makeup of Years of Accession
 
+    // eventlistener for click
+
     constructor(dateBegin, dateEnd){
         this.dateBegin = dateBegin;
         this.dateEnd = dateEnd;
     }
+
+    // setup() {
+    //     const buttons = document.querySelector('.time-periods');
+    //     console.log(buttons);
+    //     let timeStart;
+    //     let timeEnd;
+
+    //     buttons.addEventListener('click', event => {
+    //         console.log(event.target); 
+    //         if (event.target.nodeName === "LI") {
+    //             console.log(event.target.innerText);
+    //             // console.log(event.target.getAttribute("data-time-start"));
+    //             // console.log(event.target.getAttribute("data-time-end"));
+    //             timeStart = event.target.getAttribute("data-time-start");
+    //             timeEnd = event.target.getAttribute("data-time-end");
+    //         }; 
+    //     });
+    //     this.dateBegin = timeStart;
+    //     this.dateEnd = timeEnd;
+    // }
     
     // Returns the number of highlights from time period
     numHighlights(){

@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Met Highlights</title>
-    <link rel="stylesheet" href="./dist/main.css"/>
+    <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" defer></script>
     <script src="https://d3js.org/d3.v6.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
+
+
     <h1>The Met Highlights</h1>
     
     <div class="search">
@@ -26,7 +29,14 @@
             <input name="search" value="Search...">
         </form>
     </div>
-    
+
+    <dialog open>
+        <span>Greetings, welcome to a snapshot of the Met</span>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+    </dialog>  
+
     <nav>
         <ul class="time-periods"> 
             <li data-time-start="-8000" data-time-end="1000">8000 B.C. - 1000 A.D.</li>
@@ -38,21 +48,38 @@
         </ul>
     </nav>
 
+
+
     <div class="outer">
-        <div class="inner" id="artist">Container 1 
-            <div id="my_dataviz"></div>
+        <div class="inner" id="display">
+            <br>
+            <span class="inner-title">SNAPSHOT OF THIS PERIOD OF TIME AT THE MET</span>
+            <div class="inner-charts">
+                <label class="chart-title" id="pie-chart-group">
+                    <span>Share of Highlights</span>
+                    <div id="piechart_viz"></div>
+                </label>
+                
+                <label class="chart-title" id="horiz-chart-group">
+                    <span>Artists that Have the Most Works</span>
+                    <div id="example-chart"></div>
+                </label>
+            </div>
         </div>
 
-        <div class="inner" id="years">Container 2</div>
+        <div class="inner" id="selected-work">    
+            <br>
+            <span class="inner-title">SELECTED WORK</span>
+            <ul class="works">
+                <li>Title: Self-Portrait with a Straw Hat, Vincent Van Gogh, 1887 </li>
+                <br>
+                <img id="selected-work-image" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image">
+                <p>Excerpt from the Met Collections: <br> "Van Gogh produced more than twenty self-portraits during his Parisian sojourn (1886–88). 
+                    Short of funds but determined nevertheless to hone his skills as a figure painter, he became his own best 
+                    sitter: "I purposely bought a good enough mirror to work from myself, for want of a model." This picture, which shows the artist's awareness of Neo-Impressionist technique and color theory, is one of several that are painted on the reverse of an earlier peasant study."</p>
+            </ul>
+        </div>
     </div>
-
-    <label>Selected Works:</label>
-    <ul class="works">
-        <li>Self-Portrait with a Straw Hat, Vincent Van Gogh</li>
-        <li>The Dance Class, Edgar Degas</li>
-    </ul>
-
-    <br>
 
 
 

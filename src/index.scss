@@ -1,7 +1,31 @@
-
-
 body {
     font-family: "Helvetica Neue";
+}
+
+h1 {
+    color: red;
+    font-size: 2.2em; //35px;
+    margin-left: 10px;
+}
+
+dialog[open] {
+    height: 550px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://www.metmuseum.org/-/media/images/about-the-met/collection-areas/esda/esda-marquee.jpg?as=1&mh=940&mw=2320&sc_lang=en&hash=086D5684A2FE410D5B1145FE309FE55E");
+    color: white;
+    font-style: bold;
+    font-size: 25px;
+    // font-weight: 500;
+}
+
+dialog[open] span {
+    margin-top: 46px;
+    margin-right: 40px;
+    margin-bottom: 20px;
 }
 
 nav {
@@ -22,6 +46,10 @@ nav {
     font-size: 15px;
     color: gray;
     margin-right: 10px;
+}
+
+.search-bar label {
+    font-weight:400;
 }
 
 .search-bar #search-category {
@@ -45,13 +73,14 @@ nav {
 }
 */
 
-h1 {
-    color: red;
-}
 .works {
     font-style: italic;
 }
 
+#selected-work-image {
+    height: auto;
+    width: 45%;
+}
 .outer {
     display: flex;
 }
@@ -61,27 +90,69 @@ h1 {
     width: 600px;
 }
 
-#artist {
+.inner-title {
+   font-size: 12px;
+   margin-left: 15px;
+   // font-weight: bold;
+}
+
+#display {
     background-color: rgb(232, 231, 231);
     border: 1px solid black;
     border-right: 1px solid rgb(203, 203, 203);
-    width: 50%;
-    height: 40vw;
+    width: 58%;
+    height: 44vw;
+    // display: flex;
 }
 
-#years {
-    background-color: rgb(232, 231, 231);
+.inner-charts {
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chart-title span {
+    font-size: 14px;
+    font-weight: 460;
+    margin-bottom: 15px;
+}
+
+#pie-chart-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#horiz-chart-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //color: black;
+}
+
+// #example-chart {
+//     height: auto;
+//     width: 80%;
+// }
+
+// #piechart_viz{
+//     background-color: rgb(232, 231, 231);
+//     height: 50%;
+//     width: 50%;
+// }
+
+#selected-work {
+    background-color: yellow;
     border: 1px solid black;
     border-left: 1px solid rgb(236, 236, 236);
-    width: 50%;
-    height: 40vw;
+    width: 42%;
+    height: 44vw;
 }
 
-#my_dataviz{
-    background-color: rgb(232, 231, 231);
-    height: 300px;
-    width: 300px;
+.works li {
+    list-style-type: none;
 }
+
 
 p {
     font-size: 12px;

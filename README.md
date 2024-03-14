@@ -38,3 +38,5 @@ Subject to change:
 - Tuesday: Continue working on Top Artists, Years, and Selected Artworks visualizations to ensure they are rendered correctly on the canvas. Work on dynamic interactivity of the visualizations.
 - Wednesday: Wrap up remaining tasks on visualizations and focus on styling, such as with the color schemes, styled nav bars, etc.
 - Thursday Morning: Deploy to GitHub pages
+
+## Future Features

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>The Met Highlights</title>
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/c3/f0/e9/c3f0e91e5a0ecf1f30214052754f0db1.png">
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js" defer></script>
     <script src="https://d3js.org/d3.v6.js"></script>
@@ -14,8 +15,15 @@
 
 
     <h1>The Met Highlights</h1>
-    
+    <dialog open>
+        <span>Greetings, welcome to a snapshot of the Met</span>
+        <form method="dialog">
+          <button>OK</button>
+        </form>
+    </dialog>  
+
     <div class="search">
+        <p id="instructions"></p>
         <form class="search-bar">
             <label for="search-category">Search by:</label>
             <select name="search-category" id="search-category">
@@ -30,38 +38,35 @@
         </form>
     </div>
 
-    <dialog open>
-        <span>Greetings, welcome to a snapshot of the Met</span>
-        <form method="dialog">
-          <button>OK</button>
-        </form>
-    </dialog>  
 
+
+    
     <nav>
         <ul class="time-periods"> 
-            <li data-time-start="-8000" data-time-end="1000">8000 B.C. - 1000 A.D.</li>
-            <li data-time-start="1000" data-time-end="1400">1000-1400 A.D.</li>
-            <li data-time-start="1400" data-time-end="1600">1400-1600 A.D.</li>
-            <li data-time-start="1600" data-time-end="1800">1600-1800 A.D.</li>
-            <li data-time-start="1800" data-time-end="1900">1800-1900 A.D.</li>
+            <li data-time-start="-8000" data-time-end="999">8000 B.C. - 1000 A.D.</li>
+            <li data-time-start="1000" data-time-end="1399">1000-1400 A.D.</li>
+            <li data-time-start="1400" data-time-end="1599">1400-1600 A.D.</li>
+            <li data-time-start="1600" data-time-end="1799">1600-1800 A.D.</li>
+            <li data-time-start="1800" data-time-end="1899">1800-1900 A.D.</li>
             <li data-time-start="1900" data-time-end="2024">1900-present</li>
         </ul>
     </nav>
 
 
-
+    <img id="met-background" src="https://cdn.sanity.io/images/cctd4ker/production/802fb9783f2d0d918c8473c780d09b820276430b-4845x1615.jpg?w=1920&q=75&auto=format">
+    
     <div class="outer">
         <div class="inner" id="display">
             <br>
             <span class="inner-title">SNAPSHOT OF THIS PERIOD OF TIME AT THE MET</span>
             <div class="inner-charts">
                 <label class="chart-title" id="pie-chart-group">
-                    <span>Share of Highlights</span>
+                    <span>Share of Works (Highlights / Other Works)</span>
                     <div id="piechart_viz"></div>
                 </label>
                 
                 <label class="chart-title" id="horiz-chart-group">
-                    <span>Artists that Have the Most Works</span>
+                    <span>Known Artists/Attributors with the Most Works at The Met</span>
                     <div id="example-chart"></div>
                 </label>
             </div>
@@ -71,12 +76,12 @@
             <br>
             <span class="inner-title">SELECTED WORK</span>
             <ul class="works">
-                <li>Title: Self-Portrait with a Straw Hat, Vincent Van Gogh, 1887 </li>
+                <!-- <li>Title: Self-Portrait with a Straw Hat, Vincent Van Gogh, 1887 </li>
                 <br>
                 <img id="selected-work-image" src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image">
                 <p>Excerpt from the Met Collections: <br> "Van Gogh produced more than twenty self-portraits during his Parisian sojourn (1886–88). 
                     Short of funds but determined nevertheless to hone his skills as a figure painter, he became his own best 
-                    sitter: "I purposely bought a good enough mirror to work from myself, for want of a model." This picture, which shows the artist's awareness of Neo-Impressionist technique and color theory, is one of several that are painted on the reverse of an earlier peasant study."</p>
+                    sitter: "I purposely bought a good enough mirror to work from myself, for want of a model." This picture, which shows the artist's awareness of Neo-Impressionist technique and color theory, is one of several that are painted on the reverse of an earlier peasant study."</p> -->
             </ul>
         </div>
     </div>

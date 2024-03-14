@@ -18,6 +18,10 @@ linkedin.addEventListener('click', ()=>{
   window.location.href = "https://www.linkedin.com/in/carolineczhang/";
 });
 
+const github = document.querySelector('#github');
+github.addEventListener('click', ()=>{
+  window.location.href = "https://github.com/caroline495";
+});
 
 // eventlistener for click on Time Period buttons
 const buttons = document.querySelector('.time-periods');
@@ -27,7 +31,7 @@ let timeEnd;
 
 buttons.addEventListener('click', event => {
   if (event.target.nodeName === "LI") {
-    // console.log(event.target.innerText, "innertext");
+
     timeStart = event.target.getAttribute("data-time-start");
     timeEnd = event.target.getAttribute("data-time-end");
 
@@ -46,6 +50,7 @@ buttons.addEventListener('click', event => {
     }
     
     new View(timeStart, timeEnd);
+    
 
   } 
 });

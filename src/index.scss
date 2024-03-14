@@ -15,11 +15,22 @@ h1 {
     margin-bottom: 30px;
 }
 
-#linkedin, #github {
+.personal-links {
+    display: flex;
+    align-items: center;
+}
+
+#linkedin {
     height: auto;
     width: 40px;
     margin-right: 10px;
-    background-color: white;
+    background-color: transparent;
+}
+
+#github {
+    height: auto;
+    width: 52px;
+    background-color: transparent;
 }
 p {
     font-size: 12px;
@@ -117,10 +128,11 @@ nav {
 
 .outer {
     display: flex;
+    flex-shrink: 1;
 }
 
 .inner {
-    height: 400px;
+    // height: 400px;
     width: 600px;
 }
 
@@ -135,7 +147,7 @@ nav {
     border: 1px solid black;
     border-right: 1px solid rgb(203, 203, 203);
     width: 58%;
-    height: 44vw;
+    height: 70vh;
     // display: flex;
 }
 
@@ -143,6 +155,8 @@ nav {
     padding-top: 30px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    flex-shrink: 1;
 }
 
 .chart-title span {
@@ -155,12 +169,15 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
+    flex-shrink: 1;
 }
 
 #horiz-chart-group {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 div.tooltip {	
@@ -180,7 +197,7 @@ div.tooltip {
     border: 1px solid black;
     border-left: 1px solid rgb(236, 236, 236);
     width: 42%;
-    height: 44vw;
+    height: 70vh;
 }
 
 #selected-work p {
@@ -205,4 +222,9 @@ div.tooltip {
     // background-color: white;
     // color: rgb(114, 111, 111);
     text-decoration: underline;
+}
+
+svg{
+    width: auto;
+    height: auto;
 }

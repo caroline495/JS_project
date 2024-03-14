@@ -23,7 +23,8 @@ class View {
     }
     
     setup() {
-       // 1) populate pie chart for time period
+       // this.createDisplay();
+        // 1) populate pie chart for time period
         // - call numHighlights / total works in that time period 
         //      - populate pie chart with (numHighlights, numNotHighlights)
         this.numHighlights();    
@@ -43,8 +44,75 @@ class View {
         "2024": {highlight: 888, notHighlight: 138516} }; 
 
         createPieChart(shareHighlightsKey[this.dateEnd].highlight, shareHighlightsKey[this.dateEnd].notHighlight);
-        
+
     }
+
+    createDisplay(){
+        
+        const OuterParent = document.querySelector(".outer");
+
+        OuterParent.appendChild(innerDivDisplay).appendChild(br1);
+        innerDivDisplay.appendChild(innerTitle1);
+        innerDivDisplay.appendChild(innerCharts)
+            .appendChild(labelPieChartGroup);
+        labelPieChartGroup.appendChild(pieChartSpan);
+        labelPieChartGroup.appendChild(pieChartDiv);
+
+        innerCharts.appendChild(labelBarChartGroup)
+            .appendChild(barChartSpan);
+        innerCharts.appendChild(barChartDiv);
+
+        OuterParent.appendChild(innerDivSelectedWork)
+            appendChild(br2);
+        innerDivSelectedWork.appendChild(innerTitle2);
+        innerDivSelectedWork.appendChild(ul);
+
+        const innerDivDisplay = document.createElement("div");
+        innerDivDisplay.id = "display";  
+        
+        const br1 = document.createElement("br");
+        
+        const innerTitle1 = document.createElement("span");
+        innerTitle1.className = "inner-title";
+        innerTitle1.innerText = "SNAPSHOT OF THIS PERIOD OF TIME AT THE MET";
+
+        const innerCharts = document.createElement("div");
+        innerCharts.className = "inner-charts";  
+
+        const labelPieChartGroup = document.createElement("label");
+        labelPieChartGroup.className = "chart-title"; 
+        labelPieChartGroup.id = "pie-chart-group"; 
+
+        const pieChartSpan = document.createElement("span");
+        pieChartSpan.innerText = "Share of Works (Highlights / Other Works)";
+
+        const pieChartDiv = document.createElement("div");
+        pieChartDiv.id = "piechart_viz";  
+
+        const labelBarChartGroup = document.createElement("label");
+        labelBarChartGroup.className = "chart-title"; 
+        labelPieChartGroup.id = "horiz-chart-group"; 
+
+        const barChartSpan = document.createElement("span");
+        barChartSpan.innerText = "Known Artists/Attributors with the Most Works at The Met";
+
+        const barChartDiv = document.createElement("div");
+        barChartDiv.id = "example-chart";  
+
+        const innerDivSelectedWork = document.createElement("div");
+        innerDivSelectedWork.id = "selected-work";  
+
+        const br2 = document.createElement("br");
+
+        const innerTitle2 = document.createElement("span");
+        innerTitle2.className = "inner-title";
+        innerTitle2.innerText = "SELECTED WORK";
+
+        const ul = document.createElement("ul");
+        ul.className = "works";
+
+    }
+
 
     displaySelectedWork () {
         const SelectedWorkKey = 

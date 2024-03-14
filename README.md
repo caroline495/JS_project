@@ -2,7 +2,7 @@
 
 ## Background
 
-TheMetHighlights project is a data visualization of the artworks in The Metropolitan Museum of Art in New York City, focusing on the highlights of the collection. The highlights of the Met's collection are divided into 6 time periods, which can be dynamically selected and then explored further by the user. For each time period, TheMetHighlights will show a snapshot which contains information on the top artists (by works produced) in each time period of the collection, the top years (by works produced in that year), as well as selected works during that time period. 
+TheMetHighlights project is a data visualization of the artworks in The Metropolitan Museum of Art in New York City, providing a snapshot of different time periods in art history. The Met's collection is divided into 6 time periods, which can be selected and then explored by the user. For each time period, TheMetHighlights will show a snapshot which contains information on the share of highlights vs. non-highlights and the top named artists/attributors (by works produced) in each time period of the Met's collection, as well as show selected works. 
 
 
 ## Functionality & MVPs
@@ -10,25 +10,23 @@ TheMetHighlights project is a data visualization of the artworks in The Metropol
 In TheMetHighlights, users are able to:
 - Choose between time period to explore via the nav bar showing the time periods available to select. Once selected, data visualizations specific for that time period will be reflected.
 - Within each time period:
-    - Look at the artists with most number of works attributed to them 
-    - Look at the top years in which works were produced
-    - Look at selected highlights that will have information such as artist, title, year produced, region, etc.
+    - Look at the artists/attributors with most number of works attributed to them 
+    - Look at a selected highlight that will have information such as artist, title, date, location, description
 
 ## Wireframe
 
 ![Alt text](image.png) https://wireframe.cc/U6x5P3 
 
-- Title & Instructions will display "TheMetHighlights" in HTML headings,  links to this project's Github repo and my LinkedIn, and some brief instructions.
-- Nav Bar & Links on the left will have clickable time period links to switch the visualizations and fetch respective data of the selected time period.
-- The Top Artists, Top Years, and Selected Artworks Visualizations will display the fetched data in dynamic renders.
+- Title & Instructions will display "TheMetHighlights" in HTML headings,  links to my Github and my LinkedIn, and some brief instructions.
+- Nav Bar will have clickable time period links to switch the visualizations of the selected time period.
+- The Share of Works, Top Artists, and Selected Artworks will display the data in dynamic renders.
 
 ## Technologies, Libraries, APIs
 
 This project will utilize the following technologies:
 - The Metropolitan Museum of Art's public API for the undeyling data: https://metmuseum.github.io/
-- The Canvas API to potentially help with rendering visualizations
 - The D3 API for data display visualizations
-- Webpack to bundle and transpile the source JavaScript code
+- Webpack and Babel to bundle and transpile the source JavaScript code
 - npm to manage project dependencies
 
 ## Implementation Timeline

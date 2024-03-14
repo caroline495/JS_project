@@ -9,6 +9,7 @@ export function createHorizBarChart(fileName) {
   const svg = d3.select("#example-chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
+    .attr("viewbox", "0 0 100 100")
     .append("g")  // g is group element
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 

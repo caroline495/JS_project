@@ -31,6 +31,7 @@ export function createPieChart(numHighlights, numNotHighlights) {
     .append("svg")
       .attr("width", width)
       .attr("height", height)
+      .attr("viewbox", "0 0 100 100")
     .append("g")
       .attr("transform", `translate(${width/2}, ${height/2})`);
 
@@ -54,7 +55,7 @@ export function createPieChart(numHighlights, numNotHighlights) {
 
 
   // Build the pie chart: each part of the pie is a path that we build using the arc function
-  const path = svg
+  svg
     .selectAll('path')
     .data(pie)
     .enter()

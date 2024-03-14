@@ -8,7 +8,6 @@ export function createPieChart(numHighlights, numNotHighlights) {
       console.log("hello");
   }
 
-
   // Create dummy data
   let data = [{title:"Highlight", value: numHighlights, percentageShare: 0},
                 {title: "Not Highlight", value: numNotHighlights, percentageShare: 0},
@@ -54,7 +53,7 @@ export function createPieChart(numHighlights, numNotHighlights) {
       .style("opacity", 0)
 
 
-  // Build the pie chart: Basically, each part of the pie is a path that we build using the arc function.
+  // Build the pie chart: each part of the pie is a path that we build using the arc function
   const path = svg
     .selectAll('path')
     .data(pie)

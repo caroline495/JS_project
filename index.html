@@ -13,8 +13,14 @@
 </head>
 <body>
 
-
-    <h1>The Met Highlights</h1>
+    <div class="header">
+        <h1>The Met Highlights</h1>
+        <div class="personal-links">
+            <img id="github" src="github-icon.png">
+            <img id="linkedin" src="linkedin-icon.png">
+        </div>
+    </div>
+    
     <dialog open>
         <span>Greetings, welcome to a snapshot of the Met</span>
         <form method="dialog">
@@ -26,19 +32,17 @@
         <p id="instructions"></p>
         <form class="search-bar">
             <label for="search-category">Search by:</label>
-            <select name="search-category" id="search-category">
+            <!-- <select name="search-category" id="search-category">
                 <option value="select" selected="true" disabled="disabled">Select</option>
                 <option value="title">Title</option>
                 <option value="artist">Artist</option>
                 <option value="medium">Medium</option>
                 <option value="year">Year</option>
                 <option value="tag">Tag</option>
-            </select>
+            </select> -->
             <input name="search" value="Search...">
         </form>
     </div>
-
-
 
     
     <nav>

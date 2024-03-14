@@ -2,6 +2,12 @@ body {
     font-family: "Helvetica Neue";
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 h1 {
     color: red;
     font-size: 2.2em; //35px;
@@ -9,6 +15,12 @@ h1 {
     margin-bottom: 30px;
 }
 
+#linkedin, #github {
+    height: auto;
+    width: 40px;
+    margin-right: 10px;
+    background-color: white;
+}
 p {
     font-size: 12px;
     margin: 0;
@@ -69,13 +81,14 @@ nav {
 }
 
 .search-bar label {
-    font-weight:400;
+    font-weight:500;
+    margin-right: 5px;
 }
 
 .search-bar #search-category {
     font-size: 17px;
     color: gray;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-right: 5px;
 }
 

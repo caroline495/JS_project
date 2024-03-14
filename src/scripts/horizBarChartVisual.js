@@ -39,11 +39,6 @@ export function createHorizBarChart(fileName) {
   //               {"":"7", type: "g", total:"5"}
   //               ]
 
-  // Sort the data by total
-  // data.sort(function (a, b) {
-  //   return d3.ascending(a.total, b.total);
-  // });
-
   // Set the x and y scales
   const x = d3.scaleLinear()
     .range([0, width]) // range of pixels where chart will live
@@ -144,7 +139,6 @@ export function createHorizBarChart(fileName) {
               .style("opacity", 0);
       }
 
-      
     })
 });
 

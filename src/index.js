@@ -13,6 +13,12 @@ closeButton.addEventListener("click", () => {
   dialog.close();
 });
 
+const linkedin = document.querySelector('#linkedin');
+linkedin.addEventListener('click', ()=>{
+  window.location.href = "https://www.linkedin.com/in/carolineczhang/";
+});
+
+
 // eventlistener for click on Time Period buttons
 const buttons = document.querySelector('.time-periods');
 
@@ -20,7 +26,6 @@ let timeStart;
 let timeEnd;
 
 buttons.addEventListener('click', event => {
-  // console.log(event.target); 
   if (event.target.nodeName === "LI") {
     // console.log(event.target.innerText, "innertext");
     timeStart = event.target.getAttribute("data-time-start");

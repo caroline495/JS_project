@@ -4,6 +4,7 @@
 
 TheMetHighlights project is a data visualization of the artworks in The Metropolitan Museum of Art in New York City, providing a snapshot of different time periods in art history. The Met's collection is divided into 6 time periods, which can be selected and then explored by the user. For each time period, TheMetHighlights will show a snapshot which contains information on the share of highlights vs. non-highlights and the top named artists/attributors (by works produced) in each time period of the Met's collection, as well as show selected works. 
 
+See it live here: [🎨 The Met Highlights](https://caroline495.github.io/The-Met-Highlights-Project/)
 
 ## Functionality & MVPs
 
@@ -25,9 +26,9 @@ In TheMetHighlights, users are able to:
 
 This project will utilize the following technologies:
 - The Metropolitan Museum of Art's public API for the undeyling data: https://metmuseum.github.io/
-- The D3 API for data display visualizations
-- Webpack and Babel to bundle and transpile the source JavaScript code
-- npm to manage project dependencies
+- The `D3` API for data display visualizations
+- `Webpack` and `Babel` to bundle and transpile the source JavaScript code
+- `npm` to manage project dependencies
 
 ## Implementation Timeline
 
@@ -40,3 +41,6 @@ Subject to change:
 - Thursday Morning: Deploy to GitHub pages
 
 ## Future Features
+
+- Implement search functionality that connects to the Met API to allow users to search for specific objects
+- Add additional statistics to display for each time period at the Met

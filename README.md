@@ -25,7 +25,7 @@ In TheMetHighlights, users are able to:
 ## Technologies, Libraries, APIs
 
 This project will utilize the following technologies:
-- The Metropolitan Museum of Art's public API for the undeyling data: https://metmuseum.github.io/
+- The Metropolitan Museum of Art's public API for the underlying data: https://metmuseum.github.io/
 - The `D3` API for data display visualizations
 - `Webpack` and `Babel` to bundle and transpile the source JavaScript code
 - `npm` to manage project dependencies
